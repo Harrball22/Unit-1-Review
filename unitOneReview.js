@@ -5,6 +5,9 @@
 
 //CODE HERE
 
+let knightName = "Sir Henry"
+let knightID = 7
+let knightAlive = true
 
 // ***** Array ***** //
 /*
@@ -13,6 +16,7 @@
 
 //CODE HERE
 
+let codingLanguages = ["C#", "C++", "Java", "JavaScript"]
 
 /* 
     Access the 3rd element of the 'codingLanguage' array.
@@ -20,6 +24,7 @@
 
 //CODE HERE
 
+codingLanguages[2]
 
 /*
     Copy the array using one of the array methods, and call it 'codingLanguage2.'
@@ -27,6 +32,7 @@
 
 //CODE HERE
 
+let codingLanguages2 = codingLanguages.slice(0, codingLanguages.length)
 
 /* 
     Add another coding language to the codingLanguage2 array.
@@ -34,6 +40,7 @@
 
 //CODE HERE
 
+codingLanguages2.push("Python")
 
 // !!! Don't edit the code below !!! //
 let instruments = ['piano', 'trumpet', 'xylophone', 'flute', 'cello']
@@ -45,6 +52,7 @@ let instruments = ['piano', 'trumpet', 'xylophone', 'flute', 'cello']
 
 //CODE HERE
 
+instruments.pop()
 
 /* 
     Use a built-in array function to remove 'piano' from the instruments array
@@ -52,6 +60,7 @@ let instruments = ['piano', 'trumpet', 'xylophone', 'flute', 'cello']
 
 //CODE HERE
 
+instruments.shift()
 
 /* 
     Use a built-in array function to add 'guitar' to the front of the instruments array
@@ -59,6 +68,7 @@ let instruments = ['piano', 'trumpet', 'xylophone', 'flute', 'cello']
 
 //CODE HERE
 
+instruments.unshift("guitar")
 
 /* 
     Use a built-in array function to replace 'xylophone' in the instruments array to 'glockenspiel.'
@@ -66,12 +76,16 @@ let instruments = ['piano', 'trumpet', 'xylophone', 'flute', 'cello']
 
 //CODE HERE
 
-
+instruments.splice(2, 1, "glockenspiel")
 
 // ***** if-else ***** //
 /* 
     Discuss the if-else statement syntax.
 */
+
+//
+// The if, else if, and else statements will be evaulated until one is true. The statement that is true will have its code ran. No other statements will be evaluated
+//
 
 // !!! Don't edit the code below !!! //
 let num = 11;
@@ -84,6 +98,11 @@ let num = 11;
 
 //CODE HERE
 
+if (num % 2 === 0){
+    console.log(num)
+} else {
+    console.log('num is not an even number.')
+}
 
 // !!! Don't edit the code below !!! //
 let score = 83;
@@ -99,12 +118,23 @@ let score = 83;
 
 //CODE HERE
 
+if (score < 10 && score === 10){
+    console.log("Failed.")
+} else if (score > 10 && score < 41){
+    console.log("The grade is C.")
+} else if (score > 40 && score < 71){
+    console.log("The grade is B.")
+} else if (score > 70){
+    console.log("The grade is A.")
+}
 
 
 // ***** For Loop ***** //
 /* 
     Discuss the for loop syntax.
 */
+
+// The for loop is a loop that can take three parameters. The first parameter is declaring a new variable, usally a number called i. The second parameter is a conditional that if true, will run the loop through again. The third parameter is an arithmatic calculation, usually used to increment i
 
 // !!! Don't edit the code below !!! //
 let price = [10, 5, 6];
@@ -116,13 +146,16 @@ let price = [10, 5, 6];
 
 //CODE HERE
 
-
+let totalPrice = 0
+for (i = 0; i < price.length; i++){
+    totalPrice += price[i];
+}
 
 /* 
     Using the 'totalPrice,' find the average of 'price.'
 */
 
-
+let averagePrice = totalPrice / price.length
 
 // !!! Don't edit the code below !!! //
 let colors = ['red', 'green', 'yellow', 'red', 'green']
@@ -134,7 +167,19 @@ let colors = ['red', 'green', 'yellow', 'red', 'green']
 
 // CODE HERE
 
-
+for (let i = 0; i < colors.length; i++){
+    switch(colors[i]){
+        case "red":
+            console.log("apple")
+            break
+        case "green":
+            console.log("melon")
+            break
+        case "yellow":
+            console.log("banana")
+            break
+    }
+}
 
 // ***** Software Development Life Cycle (SDLC) ***** //
 /* 
